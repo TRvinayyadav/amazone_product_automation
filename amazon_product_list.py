@@ -6,6 +6,8 @@ import time
 service_object = Service()
 driver = webdriver.Chrome(service=service_object)
 
+#this is a test code 
+
 driver.get("https://www.amazon.in/")
 driver.find_element(By.XPATH, "//*[@id='nav-xshop']/a[4]").click()
 driver.sleep(10)
@@ -19,5 +21,7 @@ for product in product_list:
 
     with open('abc.csv', 'a+' , encoding='utf-8') as file:
         file.write(product.text + '\n')
+
+print("Hello Tanvi!")
 
 driver.quit()
